@@ -1,14 +1,11 @@
-function test(e) {
-    if (e) {
-        console.log(e)
-    }
-    else {
-        console.log('run');
-    }
-}
 $(document).ready(
     function () {
-        // lay phan này chèn vào phần khác    
+        // hover navbar{
+         if ($('main.index').length>=1){
+            $('nav.navbar-desktop address a + .LinkCate').css('display','none');
+         }
+        // lay phan này chèn vào phần khác
+        //   run before owl
         $('.insertTo').each(
             function () {
                 $newparent = $('.' + $(this).attr('data-NewParent'));
@@ -39,24 +36,6 @@ $(document).ready(
                 }
             )
         }
-        $('.item-5-2 ').owlCarousel({
-            loop: true,
-            margin: 10,
-            dots: true,
-            nav: true,
-            responsive: {
-                0: {
-                    items: 2,
-                    loop: true
-                },
-                567: {
-                    items: 3
-                },
-                768: {
-                    items: 5
-                }
-            }
-        });
         // click tang giá trị
         $(" button.plush ").click(
             function () {
@@ -188,33 +167,6 @@ $(document).ready(
                 );
             }
         );
-        // nav bar hover
-        // $('.dropdown-toggle').mouseenter(
-        //     function () {
-        //         $('.dropdown-toggle').addClass('show');
-        //         $('.dropdown-toggle + .dropdown-menu ').addClass('show');
-        //     }
-        // );
-        // $('.dropdown-menu').mouseenter(
-        //     function () {
-        //         $(this).addClass('show');
-        //         $(this).mouseleave(
-        //             function () {
-        //                 $(this).removeClass('show');
-        //             }
-        //         )
-        //     }
-        // );
-        // $('.dropdown-toggle').mouseleave(
-        //     function () {
-        //         $('.dropdown-toggle').removeClass('show');
-        //         $('.dropdown-toggle + .dropdown-menu ').removeClass('show');
-        //     }
-        // );
-        // animation
-        // AOS.init();
-        // carousel bootrap
-        // $('.carousel').carousel();
         $('.small-to-big-window .smallWindown ').click(
             function () {
                 var item = $(this).clone();
@@ -223,7 +175,7 @@ $(document).ready(
         // zoomOut khi ấn vào ảnh
         function zoomout() {
             // tao nen
-            let blankcover = document.createElement("div");
+            var blankcover = document.createElement("div");
             blankcover.classList.add('blankcover');
             // nen tu xoa
             $(blankcover).click(
@@ -231,23 +183,266 @@ $(document).ready(
                     blankcover.remove();
                 });
             // tao khung chua noi dung
-            let container_content = document.createElement("div");
+            var container_content = document.createElement("div");
             container_content.classList.add('content');
             // lấy phần tử cần hiển thị
-            let object = $(this).clone();
+            var object = $(this).clone();
             $('body').append(blankcover);
             $('.blankcover').append(container_content);
             $('.blankcover .content').append(object);
         };
+        //owl
+        $('.item-1 ').owlCarousel({
+            loop: true,
+            margin: 0,
+            dots: false,
+            nav: true,
+            responsive: {
+                0: {
+                    items: 1,
+                    loop: true
+                }
+            }
+        });
+        $('.SelecHeight').each(
+            function () {
+                var $id = $(this).attr('data-targer-height');
+                $('#' + $id).on("load",
+                    function () {
+                        $('.SelecHeight').each(
+                            function () {
+                                var $id = $(this).attr('data-targer-height');
+                                var $height = $('#' + $id).outerHeight();
+                                $(this).outerHeight($height);
+                            })
+                            $('.height-equal').each(
+                                function () {
+                                    $number = $(this).find('.height-fit').length;
+                                    $height = $(this).height() / $number;
+                                    // console.log($height);
+                                    $(this).find('.height-fit').each(
+                                        function () {
+                                            $(this).outerHeight($height);
+                                        }
+                                    )
+                                }
+                            );
+                    }
+                );
+            }
+        )
+      
+        $(window).resize(
+            function () {
+                $('.SelecHeight').each(
+                    function () {
+                        var $id = $(this).attr('data-targer-height');
+                        var $height = $('#' + $id).outerHeight();
+                        $(this).outerHeight($height);
+                    }
+                )
+                $('.height-equal').each(
+                    function () {
+                        $number = $(this).find('.height-fit').length;
+                        $height = $(this).height() / $number;
+                        // console.log($height);
+                        $(this).find('.height-fit').each(
+                            function () {
+                                $(this).outerHeight($height);
+                            }
+                        )
+                    }
+                );
+            }
+        )
+        $('.Number-item').outerHeight(0);
+        $('.item-3-1 ').owlCarousel({
+            loop: true,
+            margin: 10,
+            dots: false,
+            nav: true,
+            responsive: {
+                0: {
+                    items: 1,
+                    loop: true
+                },
+                567: {
+                    items: 2
+                },
+                768: {
+                    items: 3
+                }
+            }
+        });
+        $('.item-5-2 ').owlCarousel({
+            loop: true,
+            margin: 10,
+            dots: true,
+            nav: true,
+            responsive: {
+                0: {
+                    items: 2,
+                    loop: true
+                },
+                567: {
+                    items: 3
+                },
+                768: {
+                    items: 5
+                }
+            }
+        });
+        $('.item-5-2-noloop ').owlCarousel({
+            loop: false,
+            margin: 10,
+            dots: true,
+            nav: true,
+            responsive: {
+                0: {
+                    items: 2,
+                    loop: true
+                },
+                567: {
+                    items: 3
+                },
+                768: {
+                    items: 5
+                }
+            }
+        });
+        // $(" .item-5-3.owl-carousel .owl-nav button.owl-prev span").html("<i class='  fa fa-chevron-left'></i>");
+        // $(" .item-5-3.owl-carousel .owl-nav button.owl-next span").html("<i class='  fa fa-chevron-right'></i>");            
+        $('.item-2').owlCarousel({
+            loop: true,
+            margin: 5,
+            dots: false,
+            autoplay: true,
+            autoplayTimeout: 2000,
+            autoplayHoverPause: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                567: {
+                    items: 2
+                },
+                992: {
+                    items: 2
+                }
+            }
+        });
+        $('.item-4').owlCarousel({
+            loop: false,
+            margin: 5,
+            dots: false,
+            autoplay: true,
+            autoplayTimeout: 2000,
+            autoplayHoverPause: true,
+            nav: true,
+            responsive: {
+                0: {
+                    items: 4
+                },
+                567: {
+                    items: 4
+                },
+                992: {
+                    items: 4
+                }
+            }
+        });
+        $('.item-8-2').owlCarousel({
+            loop: false,
+            margin: 0,
+            dots: false,
+            autoplay: true,
+            autoplayTimeout: 2000,
+            autoplayHoverPause: true,
+            responsive: {
+                0: {
+                    items: 2
+                },
+                567: {
+                    items: 8
+                },
+                992: {
+                    items: 8
+                }
+            }
+        });
+        $(" .nav-bottom.owl-carousel .owl-nav button.owl-prev span").html(" Back");
+        $(" .nav-bottom.owl-carousel .owl-nav button.owl-next span").html(" Next");
+
+        // lan chuot owl
+        var owl = $('.item-2');
+        owl.on('mousewheel', '.owl-stage', function (e) {
+            if (e.deltaY > 0) {
+                owl.trigger('next.owl');
+            } else {
+                owl.trigger('prev.owl');
+            }
+            e.preventDefault();
+        });
+        // owl navlink
+        $('.item-auto').owlCarousel({
+            loop: false,
+            margin: 0,
+            autoWidth: true,
+            dots: true,
+            nav: true,
+        });
         // js for css            
-        // clone height element           
+        // clone height element    
+        $('.SelecHeight').each(
+            function () {
+                var $id = $(this).attr('data-targer-height');
+                var $height = $('#' + $id).height();
+                $(this).outerHeight($height);
+            }
+        )
+        $('.height-equal').each(
+            function () {
+                $number = $(this).find('.height-fit').length;
+                $height = $(this).height() / $number;
+                // console.log($height);
+                $(this).find('.height-fit').each(
+                    function () {
+                        $(this).outerHeight($height);
+                    }
+                )
+            }
+        );
+        // $(window).resize(
+        //     function(){
+        //         // console.log('run');
+        //         $('.SelecHeight').each(
+        //             function () {
+        //                 var $id = $(this).attr('data-targer-height');
+        //                 var $height = $('#' + $id).height();
+        //                 $(this).outerHeight($height);
+        //             }
+        //         )
+        //         $('.height-equal').each(
+        //             function () {
+        //                 $number = $(this).find('.height-fit').length;                
+        //                 $height= $(this).height() / $number;
+        //                 // console.log($height);
+        //                 $(this).find('.height-fit').each(
+        //                     function(){
+        //                         $(this).outerHeight($height);
+        //                     }
+        //                 )
+        //             }
+        //         );
+        //     }
+        // )
         // button buying item
         $('.button-buy-item').each(
             function () {
                 $(this).click(
                     function () {
                         $clone = $(this).clone();
-                        $clone.attr('href', 'gio-hang.html');
+                        $clone.attr('href', '/cart/');
                         $clone.addClass('slod');
                         $clone.removeClass('on-sale');
                         $(this).replaceWith($clone);
@@ -255,16 +450,20 @@ $(document).ready(
                 )
             }
         )
-        $('.SelecHeight').each(
-            function () {
-                // test($(this));
-                SetHeight($(this));
-            }
-        )
-        $('.height-equal').each(
-            function () {
-                DivideHeightEqually($(this));
-            }
-        );
-    }
-);
+    });
+// function cho kich hoat
+// mo cacte
+// function openCity(evt, cityName) {
+//     var i, tabcontent, tablinks;
+//     tabcontent = document.getElementsByClassName("tabcontent");
+//     for (i = 0; i < tabcontent.length; i++) {
+//         tabcontent[i].style.display = "none";
+//     }
+//     tablinks = document.getElementsByClassName("tablinks");
+//     for (i = 0; i < tablinks.length; i++) {
+//         tablinks[i].className = tablinks[i].className.replace(" active", "");
+//     }
+//     document.getElementById(cityName).style.display = "block";
+//     evt.currentTarget.className += " active";
+// }
+// openCity(Event, 'all');
