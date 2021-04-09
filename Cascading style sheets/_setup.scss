@@ -1,0 +1,84 @@
+// "- ở trang chủ: H2 bắt theo danh mục, H3 bắt theo sp
+// - ở trang danh mục: H1 bắt theo tên danh mục, H3 bắt theo sp trong danh mục, còn lại không chèn thẻ Heading ở bất kỳ đâu
+// - ở trang sp: H1 bắt theo tên sp, còn lại không chèn heading ở bất kỳ đâu
+// - ở trang blog: H1 bắt theo tiêu đề bài viết, còn lại không chèn heading ở bất kỳ đâu"
+
+/* thiết lập chung */
+:root {
+    --theme-color-1-5: rgba(3, 3, 3, 0.5);
+    --theme-color-2: rgb(209, 8, 8);
+    --font-color: #333333;
+    --Davy-grey: #555555;
+    --ultimate-gray: #939597;
+    --dark-charcoal: #333;
+    --color-alice: #f8f9fa;
+}
+$lightPink: rgb(249, 235, 214);
+$theme-color-1-5: --theme-color-1-5;
+$theme-color-1: rgb(249, 232, 51);
+$theme-color-2: desaturate($theme-color-1, 30%);
+$oposite-color-theme: invert($theme-color-1, 100%) ;
+$color-star: rgb(245, 155, 51);
+$font-color: #333333;
+$font-color-2: #555555;
+$font-color-3: hsl(0, 0%, 50%);
+$font-style: "Arial";
+$font-style-2: 'Times New Roman', Times, serif;
+$ultimate-gray: #939597;
+$dark-charcoal: #333;
+$davy-gray:#555555;
+$color-alice: #f8f9fa;
+$amaranth:#E83E4B;
+$color-link: #015478;
+$navbar-index: 99;
+$product-index: 100;
+$form: 101;
+body {
+    font-family: $font-style;
+    *::first-letter {
+        text-transform: uppercase;
+    }
+    @media (max-width:567px) {
+        font-family: $font-style-2;
+    }
+}
+p {
+    font-size: 16px;
+    @media screen and(max-width:567px) {
+        font-size: 12px;
+    }
+}
+h1 {
+    size: 36px;
+}
+h2 {
+    size: 24px;
+}
+h3 {
+    size: 20px;
+}
+h4,
+h5,
+h6 {
+    size: 16px;
+}
+a {
+    size: 18px;
+    &:hover {
+        color: #295fcc;
+        text-decoration: underline;
+    }
+}
+// @mixin minwidth {
+//     @media screen and (max-width:768px) {
+//         display: none;
+//     }
+// }
+.size-20{
+    font-size: 20px;
+}
+.top-right{
+    position: absolute;
+    top: 0;
+    right: 0;
+}

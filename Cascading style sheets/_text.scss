@@ -1,0 +1,145 @@
+@mixin inheritsize($font-size) {
+    font-size: $font-size;
+    *{
+        font-size: $font-size;
+    }
+}
+@mixin resize($font-size,$Subtrahend){    
+    @include inheritsize($font-size);
+    @media screen and (max-width:567px) {    
+    $font-size:$font-size - $Subtrahend;
+    font-size: $font-size;
+    @include inheritsize($font-size);
+    }
+}
+%size-12 {
+    $font-size:12px;
+    $Subtrahend:0px;
+    @include inheritsize($font-size);
+    @include resize($font-size,$Subtrahend);
+}
+%size-15 {
+    $font-size:15px;
+    $Subtrahend:0px;
+    @include inheritsize($font-size);
+    @include resize($font-size,$Subtrahend);
+}
+.title {
+    height: auto;
+    font-size: 22px;
+    text-align: center;
+    @media screen and (max-width: 567px) {
+        font-size: 18px;
+        * {
+            font-size: 18px;
+        }
+    }
+    border-top: 1px solid $theme-color-1;
+    span.content {
+        display: block;
+        margin: auto;
+        width: fit-content;
+        background: $theme-color-1;
+        padding: 5px 4em;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        @media screen and (max-width: 567px) {
+            padding: 5px 2em;
+        }
+    }
+}
+.title2 {
+    font-size: 22px;
+    margin: auto;
+    text-align: center;
+    width: fit-content;
+    position: relative;
+    @media screen and (max-width: 567px) {
+        font-size: 18px;
+    }
+    &::after {
+        content: "";
+        width: 70%;
+        height: 1px;
+        position: absolute;
+        left: 50%;
+        top: calc(100% + 0.5em);
+        transform: translateX(-50%);
+        background-color: $theme-color-1;
+    }
+}
+.title5 {
+    font-size: 16px;
+    width: fit-content;
+    position: relative;
+    @media screen and (max-width: 567px) {
+        font-size: 14px;
+    }
+    &::after {
+        content: "";
+        width: 30%;
+        height: 2px;
+        position: absolute;
+        left: 00%;
+        top: calc(100% + 0.1em);
+        // transform: translateX(-50%);
+        background-color: $theme-color-1;
+    }
+}
+.title4 {
+    font-size: 22px;
+    width: fit-content;
+    position: relative;
+    @media screen and (max-width: 567px) {
+        font-size: 18px;
+    }
+    &::after {
+        content: "";
+        width: 100%;
+        height: 2px;
+        position: absolute;
+        left: 00%;
+        top: calc(100% + 0.1em);
+        // transform: translateX(-50%);
+        background-color: $theme-color-1;
+    }
+}
+.title3 {
+    font-size: 22px;
+    margin: auto;
+    text-align: center;
+    width: fit-content;
+    position: relative;
+    @media screen and (max-width: 567px) {
+        font-size: 18px;
+    }
+}
+
+.font-family-2 {
+    font-family: "Times New Roman Bold Italic";
+}
+
+.font-color-3 {
+    color: $font-color-3;
+}
+
+.font-color-2 {
+    color: $font-color-2;
+}
+
+.font-color-1 {
+    color: $font-color;
+}
+@mixin paragraph-limited($numberline) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $numberline;
+    -webkit-box-orient: vertical;
+    height: $numberline*1.5em + 0.1em ;
+}
+// .paragraph-limited-2{
+//     @include paragraph-limited(2);
+// }
+
+

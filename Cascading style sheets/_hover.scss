@@ -1,0 +1,229 @@
+// min
+@mixin boxshadown($offset, $burl, $spread, $color) {
+    $shadown-X: $offset;
+    $shadown-Y: $offset;
+    $shadown-blur-radius: $burl;
+    $shadown-spread-radius: $spread;
+    $shadown-color: $color;
+    box-shadow: ($shadown-X) (-$shadown-Y) $shadown-blur-radius $shadown-blur-radius $shadown-color,
+        (-$shadown-X) ($shadown-Y) $shadown-blur-radius $shadown-blur-radius $shadown-color,
+        ($shadown-X) ($shadown-Y) $shadown-blur-radius $shadown-blur-radius $shadown-color,
+        (-$shadown-X) (-$shadown-Y) $shadown-blur-radius $shadown-blur-radius $shadown-color;
+}
+@mixin HoverPaddingLeft($padding) {
+    &:hover {
+        padding-left: $padding;
+    }
+}
+%hover-shadown,.hover-shadow {
+    &:hover {
+        filter: brightness(110%);
+        text-decoration: none;
+        box-shadow: 0 0px 3px 3px;
+    }
+}
+%active {
+    &:active {
+        box-shadow: inset 0px 0px 2px 2px $oposite-color-theme, 0px 0px 2px 2px $oposite-color-theme;
+    }
+}
+// hover box
+%hover-shadow {
+    &:hover {
+        border-color: white;
+        $shadown-X: 2px;
+        $shadown-Y: 2px;
+        $shadown-blur-radius: 1px;
+        $shadown-spread-radius: 1px;
+        $shadown-color: $theme-color-1;
+        box-shadow: ($shadown-X) (-$shadown-Y) $shadown-blur-radius $shadown-blur-radius $shadown-color,
+            (-$shadown-X) ($shadown-Y) $shadown-blur-radius $shadown-blur-radius $shadown-color,
+            ($shadown-X) ($shadown-Y) $shadown-blur-radius $shadown-blur-radius $shadown-color,
+            (-$shadown-X) (-$shadown-Y) $shadown-blur-radius $shadown-blur-radius $shadown-color;
+    }
+}
+.hover-1 {
+    transition: 0.3s ease-in-out;
+    @include HoverPaddingLeft(1em);
+    &:hover {
+        color: black;
+        text-decoration: none;
+        font-weight: bold;
+    }
+}
+/*hover underline*/
+.hover-underline {
+    position: relative;
+    transition: 0.3s ease-in-out;
+    // &::before {
+    //     content: "";
+    //     position: absolute;
+    //     top: calc( -2px);
+    //     left: 50%;
+    //     width: 0%;
+    //     height: 2px;
+    //     background-color: red;
+    //     transform: translate(-50%);
+    //     transition: 0.3s ease-in-out;
+    // }
+    &::after {
+        content: "";
+        position: absolute;
+        top: calc(100% - 2px);
+        left: 50%;
+        width: 0%;
+        height: 2px;
+        background-color: red;
+        transform: translate(-50%);
+        transition: 0.3s ease-in-out;
+    }
+    &:hover {
+        font-weight: bold !important;
+        // background: white;
+        // color: $theme-color-1;
+        // *{color: $theme-color-1;}
+        // outline: 2px solid red;
+        &::before,
+        &::after {
+            width: 100%;
+        }
+    }
+}
+
+.hover-underline-2 {
+    border-bottom: 2px solid $font-color-3 !important;
+    &:hover {
+        border-bottom: 3px solid $theme-color-1 !important;
+    }
+    &.active {
+        border-bottom: 3px solid $theme-color-1 !important;
+    }
+}
+.hover-read {
+    transition: 0.3s ease-in-out;
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+.hover-linkUnderline {
+    &:hover {
+        text-decoration: none;
+        color: $theme-color-1;
+        * {
+            color: $theme-color-1;
+            font-weight: bold;
+        }
+    }
+}
+
+.hover-color-white:hover {
+    color: white;
+}
+
+.hover-shadown {
+    &:hover {
+        box-shadow: 2px 2px 2px 2px var($theme-color-1), -2px 2px 2px 2px var($theme-color-1),
+            2px -2px 2px 2px var($theme-color-1), -2px -2px 2px 2px var($theme-color-1);
+    }
+}
+
+.hover-background-1 {
+    &:hover {
+        background-color: $theme-color-1;
+    }
+}
+
+.hover-background-whitesmoke {
+    &:hover {
+        background-color: whitesmoke;
+    }
+}
+
+.hover-color-1 {
+    transition: 0.3s ease-in-out;
+    &:hover {
+        text-shadow: 2px 2px 3px $font-color;
+        color: black;
+    }
+}
+
+.hover-color-black {
+    &:hover {
+        color: black;
+    }
+}
+
+.hover-color-white {
+    &:hover {
+        color: white;
+    }
+}
+.hover-bold {
+    &:hover {
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+}
+.hover-bright-shadow {
+    transition: 0.3s ease-in-out;
+    &:hover {
+        cursor: pointer;
+        filter: brightness(105%);
+        $shadown-X: 1px;
+        $shadown-Y: 1px;
+        $shadown-blur-radius: 2px;
+        $shadown-spread-radius: 5px;
+        $shadown-color: lightgray;
+        @include boxshadown(2px, 2px, 2px, $theme-color-1);
+    }
+}
+.hover-success {
+    &:hover {
+        background: limegreen;
+        color: red;
+    }
+}
+.Shine {
+    position: relative;
+    overflow: hidden;
+    &::before {
+        position: absolute;
+        top: 0;
+        left: -75%;
+        z-index: 2;
+        display: block;
+        content: "";
+        width: 50%;
+        height: 100%;
+        background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
+        background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
+        -webkit-transform: skewX(-25deg);
+        transform: skewX(-25deg);
+    }
+    &:hover::before {
+        -webkit-animation: shine 0.75s;
+        animation: shine 0.75s;
+    }
+}
+%shine {
+    position: relative;
+    overflow: hidden;
+    &::before {
+        position: absolute;
+        top: 0;
+        left: -75%;
+        z-index: 2;
+        display: block;
+        content: "";
+        width: 50%;
+        height: 100%;
+        background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
+        background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
+        -webkit-transform: skewX(-25deg);
+        transform: skewX(-25deg);
+    }
+    &:hover::before {
+        -webkit-animation: shine 0.75s;
+        animation: shine 0.75s;
+    }
+}

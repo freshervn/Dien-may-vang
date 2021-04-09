@@ -1,0 +1,566 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- title -->
+    <title>Queen crown</title>
+
+    <!-- title icon -->
+    <link rel="icon" href="/images/logo.png" type="image/x-icon?">
+
+    <!-- fontawesome 4 icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- bootrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- owl carousel -->
+    <link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
+
+    <!-- AOS -->
+    <link href="aos-master/dist/aos.css" rel="stylesheet">
+
+    <!-- j query -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- my js -->
+    <script src="javascript-top.js"></script>
+
+    <!-- my css -->
+    <link rel="stylesheet" href="/Cascading style sheets/ mystyle.css">
+</head>
+
+<body class="animation-fadeup">
+    <div class="header">
+        <header class=" background-whitesmoke py-2 d-desktop size-12">
+            <div class="container  d-flex justify-content-between ">
+                <!-- thông tin liên hệ -->
+                <div class="d-flex ">
+                    <dl class="d-flex flex-wrap justify-content-around mb-0 color-black my-auto">
+                        <dd class="d-md-inline d-block mb-0 mr-4 ">
+                            <p class=" my-auto"><img src="/images/phone-ring.svg" alt="024 629 09968 - 038 2488 338"
+                                    class="img-icon mr-2 ">024 629 09968 - 038 2488 338</p>
+                        </dd>
+                        <dd class="d-md-inline d-block mb-0 mr-4">
+                            <p class=" my-auto"><img src="/images/mail.svg" alt="display@viethitek.com"
+                                    class="img-icon mr-2">display@viethitek.com</p>
+                        </dd>
+                    </dl>
+                </div>
+                <!-- nút đăng nhập -->
+                <a href="" class="ml-auto color-black "><button
+                        class="border-transparent background-transparent hover-border ">Đăng nhập</button></a>
+            </div>
+        </header>
+        <!-- navbar-mobie -->
+        <nav class="px-2 navbar-mobie container py-3">
+            <a href="index.html" class="p-0 ">
+                <img src="/images/logo.png" alt="" class="logo-nav p-0">
+            </a>
+            <button data-block-class="input-search" id='open-close-search' class="click-show py-2 px-4 rounded"
+                data-status='close'>
+                <img src="/images/searchIcon.svg" alt=" search">
+            </button>
+            <div class="input-search p-2 ClickToShow">
+                <div class="mb-0 form">
+                    <button class="p-2 px-4 ml-0" type="submit">
+                        <img src="/images/searchIcon.svg" alt="">
+                    </button>
+                    <input class="px-2 no-border  no-outline-focus" type="search" placeholder="Tìm kiếm"
+                        aria-label="Search">
+                    <button class="click-show" data-block-class="input-search">
+                        <img src="/images/close-button.png" alt=" search">
+                    </button>
+                </div>
+            </div>
+            <!-- nút bar mobie -->
+            <!-- <button class="background-transparent rounded no-border px-3 d-mobie click-show my-auto focus-brighter "
+                data-block-id='navbar-collapse'>
+                <i class="fa fa-bars size-22 color-theme-1"></i>
+            </button> -->
+            <!-- link navbar ở mobie -->
+            <!-- <div id="navbar-collapse" class=" ClickToShow background-whitesmoke display-none pb-3 navlink">
+                <a href="gioi-thieu.html" class="font-color-2 size-13 d-block py-1 px-2 "><b>
+                    Giới thiệu
+                </b></a> 
+            </div> -->
+        </nav>
+        <!-- navbar máy tính -->
+        <nav class="navbar-desktop  ">
+            <section class="background-theme-1 d-desktop">
+                <main class="container d-flex justify-content-between py-2">
+                    <a href="index.html" class="p-0 ">
+                        <img src="/images/logo.png" alt="" class="logo-nav p-0">
+                    </a>
+                    <div class="input-search">
+                        <form class="mb-0 form">
+                            <input class="px-2 no-border  no-outline-focus" type="search" placeholder="Tìm kiếm"
+                                aria-label="Search">
+                            <button class="p-2 px-4 ml-0" type="submit">
+                                <img src="/images/searchIcon.svg" alt="">
+                            </button>
+                        </form>
+                    </div>
+                    <!-- nút giỏ hàng -->
+                    <a href="gio-hang.html" class=" my-auto d-desktop">
+                        <button class="btn cart-button" type="submit">
+                            <img src="/images/cart.svg" alt="">
+                            <span class="number">1</span>
+                        </button>
+                    </a>
+                </main>
+            </section>
+            <section class=" background-whitesmoke">
+                <address class="container  size-13 px-0 mb-0">
+                    <div class="   d-flex justify-content-between navlink">
+                        <li class="col-md-3 px-0 d-desktop d-flex flex-start">
+                            <a href="cate.html" class="hover-color-1 text-left my-auto">
+                                <img src="/images/catalogueIcon.svg" alt="">
+                                DANH MỤC SẢN PHẨM
+                            </a>
+                            <div class="LinkCate px-0 ">
+                                <a href="cate.html">
+                                    GIÁ RẺ HÔM NAY
+                                </a>
+                                <a href="cate.html">
+                                    ĐỒ DÙNG NHÀ BẾP
+                                </a>
+                                <a href="cate.html">
+                                    ĐỒ ĐIỆN GIA DỤNG
+                                </a>
+                                <a href="cate.html">
+                                    ĐIỆN LẠNH
+                                </a>
+                                <a href="cate.html">
+                                    TIVI,LOA,DÀN KARAOKE
+                                </a>
+                                <a href="cate.html">
+                                    CHĂM SÓC SỨC KHOẺ & SẮC ĐẸP
+                                </a>
+                                <a href="cate.html">
+                                    THIẾT BỊ THÔNG MINH
+                                </a>
+                                <a href="cate.html">
+                                    MÁY TÍNH, THIẾT BỊ VĂN PHÒNG
+                                </a>
+                                <a href="cate.html">
+                                    NHÀ CỬA, VẬT DỤNG ĐỜI SỐNG
+                                </a>
+                                <a href="cate.html">
+                                    ĐIỆN CƠ & DỤNG CỤ
+                                </a>
+                                <a href="cate.html">
+                                    THIẾT BỊ VỆ SINH & PHÒNG TẮM
+                                </a>
+                            </div>
+                        </li>
+                        <li class="d-desktop my-auto">
+                            <a href="cate.html" class="hover-color-1 text-center  ">
+                                Khuyến mãi hôm nay
+                            </a>
+                        </li>
+                        <li class="d-desktop my-auto">
+                            <a href="chi-tiet-tin-tuc.html" class="hover-color-1 text-center">
+                                Cam kết phục vụ
+                            </a>
+                        </li>
+                        <li class="d-desktop my-auto">
+                            <a href="ho-tro-tra-gop.html" class="hover-color-1 text-center">
+                                Hỗ trợ trả góp
+                            </a>
+                        </li>
+                        <li class="d-desktop my-auto">
+                            <a href="tin-tuc.html" class="hover-color-1 text-center">
+                                Kinh nghiệm mua sắm
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tel:800-140-10000" class="hover-color-1 text-start  py-auto ">
+                                <div class="d-flex">
+                                    <img src="/images/hotline.png" alt="hotline" class="my-auto">
+                                    <p class="mb-0 size-10 ml-2">
+                                        800-140-10000
+                                        <br>
+                                        Mon - Fri: 8:00 - 17:00
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="gio-hang.html" class=" my-auto d-mobie">
+                                <button class="btn cart-button p-0" type="submit">
+                                    <img src="/images/cart.svg" alt="">
+                                    <span class="number">1</span>
+                                </button>
+                            </a>
+                        </li>
+                    </div>
+                </address>
+            </section>
+            <!-- container -->
+        </nav>
+    </div>
+    <main class="thanh-toan">
+        <!-- breadcrumb -->
+        <article class="container  >
+            <nav aria-label="breadcrumb" class="container">
+                <ol class="breadcrumb ">
+                    <li class="breadcrumb-item size-14 px-1"><a href="#">Trang chủ</a></li>
+                    <li class="breadcrumb-item size-14 px-1"><a href="#">Giỏ hàng</a></li>
+                    <li class="breadcrumb-item size-14 px-1"><a href="#">Thanh toán</a></li>
+                    <li class="breadcrumb-item active size-14" aria-current="page"> Đặt hàng thành công</li>
+                </ol>
+            </nav>
+        </article>
+        <article class="container  pt-5">
+            <p class="size-18  mb-5"><b>ĐẶT HÀNG THÀNH CÔNG</b></p>
+            <blockquote class="text-center border border-warning px-md-5 py-3 rounded">
+                <p>CẢM ƠN QUÝ KHÁCH HÀNG. ĐƠN ĐẶT HÀNG CỦA QUÝ KHÁCH ĐÃ ĐƯỢC NHẬN</p>
+                <p>Mọi thắc mắc cần hỗ trợ đơn hàng này quy khách vui lòng liên hệ bộ phận phụ trách đơn hàng 090 400
+                    8800
+                </p>
+            </blockquote>
+            <div class="row mx-0 py-3">
+                <div class="w-20d border-right text-center">
+                    <p class="mb-0">
+                        <b>
+                            Mã đơn hàng
+                        </b>
+                    </p>
+                    <p>6657</p>
+                </div>
+                <div class="w-20d border-right text-center">
+                    <p class="mb-0">
+                        <b>
+                            Ngày đăng ký
+                        </b>
+                    </p>
+                    <p>19/09/2020</p>
+                </div>
+                <div class="w-20d border-right text-center">
+                    <p class="mb-0">
+                        <b>
+                            Giá trị đơn hàng
+                        </b>
+                    </p>
+                    <p>3270.000đ</p>
+                </div>
+                <div class="w-20d border-right text-center">
+                    <p class="mb-0">
+                        <b>
+                            Phương thức thanh toán:
+                        </b>
+                    </p>
+                    <p>Chuyển khoản</p>
+                </div>
+                <div class="w-20d border-left text-center">
+                    <p class="mb-0">
+                        <b>
+                            Phương thức nhận hàng
+                        </b>
+                    </p>
+                    <p>Giao hàng tận nơi</p>
+                </div>
+            </div>
+            <blockquote class=" border border-warning rounded">
+                <p class="background-whitesmoke p-3">THÔNG TIN KHÁCH HÀNG</p>
+                <table>
+                    <tr>
+                        <td class=" px-2 pr-md-5 pl-3 pb-3">Họ tên</td>
+                        <td class=" px-2 pb-3">Nguyễn văn A</td>
+                    </tr>
+                    <tr>
+                        <td class=" px-2 pr-md-5 pl-3 pb-3">Email</td>
+                        <td class=" px-2 pb-3">nguyenvân@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td class=" px-2 pr-md-5 pl-3 pb-3">Điện thoại</td>
+                        <td class=" px-2 pb-3">0932 005 399</td>
+                    </tr>
+                    <tr>
+                        <td class=" px-2 pr-md-5 pl-3 pb-3">Địa chỉ nhận hàng</td>
+                        <td class=" px-2 pb-3">166/7 đường số 4, Phường 16, quận gò vấp, Tp HCM</td>
+                    </tr>
+                    <tr>
+                        <td class=" px-2 pr-md-5 pl-3 pb-3">thông tin xuất hóa đơn</td>
+                        <td class=" px-2 pb-3"></td>
+                    </tr>
+                    <tr>
+                        <td class=" px-2 pr-md-5 pl-3 pb-3">tên công ty</td>
+                        <td class=" px-2 pb-3"> công ty Cp ABC</td>
+                    </tr>
+                    <tr>
+                        <td class=" px-2 pr-md-5 pl-3 pb-3">mã số thuế</td>
+                        <td class=" px-2 pb-3">021568791</td>
+                    </tr>
+                    <tr>
+                        <td class=" px-2 pr-md-5 pl-3 pb-3">địa chỉ</td>
+                        <td class=" px-2 pb-3">166/7 đường số 4, Phường 16, quận gò vấp, Tp HCM</td>
+                    </tr>
+                    <tr>
+                        <td class=" px-2 pr-md-5 pl-3 pb-3">nội dung xuất hóa đơn</td>
+                        <td class=" px-2 pb-3">không có nội dung</td>
+                    </tr>
+                </table>
+            </blockquote>
+            <blockquote class=" border border-warning rounded">
+                <p class="background-whitesmoke p-3 upcase">THÔNG TIN chi tiết đơn hàng</p>
+                <table class="w-100">
+                    <tr>
+                        <th class=" px-2border-bottom pl-2 pb-3">sản phẩm</th>
+                        <th class=" px-2border-bottom pb-3">số lượng</th>
+                        <th class=" px-2border-bottom pr-2 text-right pr-3 pb-3">đơn giá</th>
+                    </tr>
+                    <tr>
+                        <td class="px-2 pr-md-5 pl-3 pb-3 py-2">Nồi cơm điện Happycook 1.8 lít HCJ-1822</td>
+                        <td class="px-2 py-2">1</td>
+                        <td class="px-2 py-2 text-right pr-3">480.000đ</td>
+                    </tr>
+                </table>
+                <div class="d-flex justify-content-between px-2  px-md-3 mt-5">
+                    <p>Chiết khấu</p>
+                    <p>-</p>
+                </div>
+                <div class="d-flex justify-content-between px-2  px-md-3">
+                    <p>Tổng tiền tạm tính</p>
+                    <p>480.000đ</p>
+                </div>
+                <div class="d-flex justify-content-between px-2  px-md-3">
+                    <p>Phí vận chuyển </p>
+                    <p>0</p>
+                </div>
+                <div class="d-flex justify-content-between px-2  px-md-3">
+                    <p>Thuế (Vat)</p>
+                    <p></p>
+                </div>
+                <hr>
+                <div class="d-flex justify-content-between px-2  px-md-3">
+                    <p>TỔNG CỘNG</p>
+                    <p class="text-danger">
+                        <b>
+                            480.000đ
+                        </b>
+                    </p>
+                </div>
+            </blockquote>
+        </article>
+        <article class="container  pb-5">
+            <a class="d-block mb-2 mt-3 " href="./">
+                <img src="/images/goback2.svg" alt="" class="img-icon">
+                quay về giỏ hàng
+            </a>
+        </article>
+
+
+    </main>
+    <footer>
+        <!-- liên hệ với chúng tôi -->
+        <section class="background-theme-1 ">
+            <main class="container d-flex flex-wrap justify-content-between py-2 position-relative">
+                <a href="index.html" class="">
+                    <figure class="anh-tron-footer-dien-may-vang">
+                        <img src="/images/anhtrangchi.svg" alt="" class="logo-nav p-0">
+                    </figure>
+                </a>
+                <div class="input-search-2 ">
+                    <p class="my-auto mr-3 text-wrap-mobie">
+                        <b>
+                            ĐĂNG KÝ NHẬN BẢN TIN
+                        </b>
+                    </p>
+                    <p class="my-auto d-mobie text-wrap-mobie">
+                        <img src="/images/listenIcon.svg" alt="">
+                        Hỗ trợ 24/7
+                    </p>
+                    <form class="form">
+                        <input class="px-2 no-border  no-outline-focus" type="search" placeholder="Tìm kiếm"
+                            aria-label="Search">
+                        <button class="p-2 px-4 ml-0" type="submit">
+                            <img src="/images/sendIcon.svg" alt="">
+                        </button>
+                    </form>
+                </div>
+                <!-- nút giỏ hàng -->
+                <p class="my-auto d-desktop">
+                    <img src="/images/listenIcon.svg" alt="">
+                    Hỗ trợ 24/7
+                </p>
+            </main>
+        </section>
+        <div class="container ">
+            <!-- div -->
+            <div class="row mx-0 px-0">
+                <!-- link chính sách -->
+                <div class="col-md-4 color-white px-0 px-md-5 mt-3 mt-md-0">
+                    <p class="size-16 mb-3"><b>CHÍNH SÁCH</b></p>
+                    <a href="tin-tuc-chi-tiet.html" class="hover-linkUnderline">
+                        <p class=" underline-white mb-2 size-12">
+                            Chính sách bảo hành sản phẩm
+                        </p>
+                    </a>
+                    <a href="tin-tuc-chi-tiet.html" class="hover-linkUnderline">
+                        <p class=" underline-white mb-2 size-12">
+                            Chính sách bảo mật
+                        </p>
+                    </a>
+                    <a href="tin-tuc-chi-tiet.html" class="hover-linkUnderline">
+                        <p class=" underline-white mb-2 size-12">
+                            Chính sách đổi trả và hoàn tiền
+                        </p>
+                    </a>
+                    <a href="tin-tuc-chi-tiet.html" class="hover-linkUnderline">
+                        <p class=" underline-white mb-2 size-12">
+                            Chính sách hoạt động & quy định chung
+                        </p>
+                    </a>
+                    <a href="tin-tuc-chi-tiet.html" class="hover-linkUnderline">
+                        <p class=" underline-white mb-2 size-12">
+                            Chính sách vận chuyển
+                        </p>
+                    </a>
+                    <a href="tin-tuc-chi-tiet.html" class="hover-linkUnderline">
+                        <p class=" underline-white mb-2 size-12">
+                            Quy định và hình thức thanh toán
+                        </p>
+                    </a>
+                    <a href="tin-tuc-chi-tiet.html" class="hover-linkUnderline">
+                        <p class=" underline-white mb-2 size-12">
+                            Thông tin sản phẩm – dịch vụ cung cấp
+                        </p>
+                    </a>
+                </div>
+                <!-- lien he so dien thoai -->
+                <div class="col-md-4 color-white px-0 px-md-3">
+                    <p class="size-16 mb-1"><b>TỔNG ĐÀI HỖ TRỢ (GỌI MIỄN PHÍ)</b></p>
+                    <div class="linkTel size-12 pt-3">
+                        <p>Mua hàng:
+                            <a href="tel:+𝟎𝟗𝟎𝟒 𝟎𝟎 𝟖𝟖 𝟎𝟎" class="hover-linkUnderline">
+                                <b>
+                                    1800.1061
+                                </b>
+                            </a>
+                            (7:30 - 22:00)
+                        </p>
+                        <p>Kỹ thuật:
+                            <a href="tel:+𝟎𝟗𝟎𝟒 𝟎𝟎 𝟖𝟖 𝟎𝟎" class="hover-linkUnderline">
+                                <b>
+                                    1800.1764
+                                </b>
+                            </a>
+                            (7:30 - 22:00)
+                        </p>
+                        <p>
+                            Bảo hành:
+                            <a href="tel:+𝟎𝟗𝟎𝟒 𝟎𝟎 𝟖𝟖 𝟎𝟎" class="hover-linkUnderline">
+                                <b>
+                                    1800.1065
+                                </b>
+                            </a>
+                            (8:00 - 21:00)
+                        </p>
+                        <p>
+                            Khiếu nại:
+                            <a href="tel:+𝟎𝟗𝟎𝟒 𝟎𝟎 𝟖𝟖 𝟎𝟎" class="hover-linkUnderline">
+                                <b>
+                                    1800.1063
+                                </b>
+                            </a>
+                            (8:00 - 21:30)
+                        </p>
+                    </div>
+
+                    <div class="d-flex flex-wrap mt-2">
+                        <div class="img mr-2 d-flex">
+                            <img src="/images/stickerFooter1.png" alt="" class="img-icon-2 my-auto">
+                        </div>
+                        <div class="img mr-2 d-flex">
+                            <img src="/images/stickerFooter2.png" alt="" class="img-icon-2 my-auto">
+                        </div>
+                    </div>
+                </div>
+                <!-- khung fb -->
+                <div class="col-md-4 color-white px-0 px-md-3 mt-3 mt-md-0">
+                    <p class="size-16 mb-3"><b>
+                            KẾT NỐI VỚI CHÚNG TÔI
+                        </b></p>
+                    <div class="fb-page" data-href="https://www.facebook.com/dienmayvangonline/" data-tabs="timeline"
+                        data-width="260" data-height="260" data-small-header="false" data-adapt-container-width="true"
+                        data-hide-cover="false" data-show-facepile="true">
+                        <blockquote cite="https://www.facebook.com/dienmayvangonline/" class="fb-xfbml-parse-ignore"><a
+                                href="https://www.facebook.com/dienmayvangonline/">Điện Máy Vàng</a></blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <!-- chan trang -->
+        <div class="background-davy-gray py-2 mt-5 line-bottom">
+            <p class="color-white text-center mb-0 size-12">
+                Copyright © 2021 dienmayvang. All rights reserved. Designed By Fagogroup
+            </p>
+        </div>
+        <!-- button ở điện thoaij -->
+        <div id='sticker-mobi'>
+            <ul>
+                <li class='col'>
+                    <a href="index.html">
+                        <img src='/images/homemobibutton.svg'>
+                    </a>
+                    <p>Trang chủ</p>
+                </li>
+                <li class='col'>
+                    <a href="index.html">
+                        <img src='/images/messenger.svg'>
+                    </a>
+                    <p>messenger</p>
+                </li>
+                <li class='col' id='phone-call'>
+                    <a href="tel:𝟎𝟗𝟎𝟒 𝟎𝟎 𝟖𝟖 𝟎𝟎">
+                        <img src='/images/phoneRing.svg'>
+                    </a>
+                    <p>Hotline</p>
+                </li>
+                <li class='col'>
+                    <a href='index.html'>
+                        <img src='/images/zalo.png'>
+                    </a>
+                    <p>zalo</p>
+                </li>
+                <li class='col'>
+                    <a href="gio-hang.html">
+                        <img src='/images/cart.svg'>
+                    </a>
+                    <p>giỏ hàng</p>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <!-- AOS -->
+    <script src="aos-master/dist/aos.js"></script>
+    </script>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!-- 
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+    integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
+    integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj"
+    crossorigin="anonymous"></script> -->
+    <script src="OwlCarousel2-2.3.4/dist/owl.carousel.min.js" type="text/javascript"></script>
+    <script src="dien-may-vang.js"></script>
+</body>
+
+</html>
