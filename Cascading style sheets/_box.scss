@@ -15,18 +15,12 @@
     display: none;
 }
 // border
-.border-theme-1 {
-    border: 1px solid $theme-color-1;
-}
+// .border-theme-1 {
+//     border: 1px solid $theme-color-1;
+// }
 .border-white {
     color: lightgray;
     transition: 0.1s ease-in-out;
-    // &:hover {
-    //     text-decoration: none;
-    //     border-color: $theme-color-1;
-    //     color: $theme-color-1;
-    //     font-weight: bold;
-    // }
 }
 .border-transparent {
     border-color: transparent;
@@ -54,13 +48,13 @@
     border-top-color: gray;
     padding-top: 5px;
 }
-.border-bottom-dashed-1 {
+@mixin border-bottom-dashed-1($theme-color-1) {
     border-bottom-width: 1px;
     border-bottom-style: dashed;
     border-bottom-color: $theme-color-1;
     padding-bottom: 5px;
 }
-.border-left-5 {
+@mixin border-left-5($theme-color-1) {
     border-left: 5px solid $theme-color-1;
 }
 %border-circle {
@@ -94,4 +88,11 @@
 %flex-center {
     display: flex;
     justify-content: center;
+}
+%fullbox{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height:100%;
 }

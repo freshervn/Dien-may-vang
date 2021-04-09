@@ -1,8 +1,8 @@
 .background-Solitude {
     background-color: #e9ecef;
 }
-.background-lightPink {
-    background: $lightPink;
+%background-lightPink {
+    background: rgb(249, 235, 214);
 }
 
 .background-Solitude {
@@ -21,24 +21,13 @@
     background-color: whitesmoke;
 }
 
-.background-ultimate-gray {
-    background-color: $ultimate-gray;
+%background-ultimate-gray {
+    background-color: #939597;
 }
 
 .background-light-gray {
     background-color: lightgray;
 }
-
-.background-theme-1 {
-    background-color: $theme-color-1;
-}
-
-.background-theme-2 {
-    background-color: $theme-color-1;
-}
 .background-black {
     background-color: black;
-}
-.amaranth{
-    color: $amaranth ;
 }

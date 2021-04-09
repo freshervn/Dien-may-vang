@@ -1,192 +1,192 @@
-nav {
-    .navlink {
-        a {
-            display: block;
-            padding: 1em;
-            &:link {
-                text-decoration: none;
-            }
-            &:hover {
-                text-decoration: none;
-            }
-        }
-    }
-}
-nav.navbar-mobie {
-    //mọi ảnh trong navbả sẽ cao bằng 1.5em
-    background: $theme-color-1;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    font-size: 14px;
-    a {
-        img.logo-nav {
-            width: auto;
-            height: 2.5em;
-        }
-    }
-    button,
-    .button {
-        display: block;
-        background: $dark-charcoal;
-        border: none;
-        img {
-            height: 1em;
-            width: auto;
-        }
-    }
-    .input-search {
-        background: $theme-color-1;
-        left: 0;
-        width: 100%;
-        position: absolute;
-        animation-name: fadeup;
-        animation-duration: 0.3s;
-        animation-timing-function: ease-in-out;
-        font-size: 13px;
-        padding: 0 0;
-        display: none;
-        .form {
-            outline-color: transparent;
-            overflow: hidden;
-            border-radius: 5px;
-            background: white;
-            display: flex;
-            flex: none;
-        }
-        margin: auto auto;
-        input[type="search"] {
-            flex: auto;
-            &:focus-within {
-                box-shadow: inset 0px 0px 3px 3px $dark-charcoal;
-            }
-        }
-        @media screen and(min-width:568px) {
-            margin: auto 1em auto auto;
-            max-width: 567px;
-            flex: auto;
-            img {
-                width: 0;
-            }
-            input[type="search"] {
-                flex: auto;
-                width: 0;
-                padding: 0;
-            }
-        }
-    }
-    @media screen and (min-width: 567px) {
-        display: none;
-    }
-}
-nav.navbar-desktop {
-    position: sticky;
-    top: 0;
-    z-index: $navbar-index;
-    @media screen and (max-width:768px) {
-        position: relative;
-    }
-    //mọi ảnh trong navbả sẽ cao bằng 1.5em
-    img {
-        width: auto;
-        height: 3.5em;
-    }
-    button.cart-button {
-        img {
-            height: 1.5em;
-        }
-    }
-    .z-100 {
-        z-index: 100;
-    }
-    .input-search {
-        button,
-        .button {
-            display: block;
-            background: $dark-charcoal;
-            border: none;
-            img {
-                height: 1.5em;
-                width: auto;
-            }
-        }
-        max-width: 567px;
-        flex: auto;
-        padding: 1em;
-        input[type="search"] {
-            flex: auto;
-            padding: 0;
-        }
-        background: $theme-color-1;
-        font-size: 13px;
-        .form {
-            outline-color: transparent;
-            overflow: hidden;
-            border-radius: 5px;
-            background: white;
-            display: flex;
-            flex: none;
-        }
-        input[type="search"] {
-            flex: auto;
-            &:focus-within {
-                box-shadow: inset 0px 0px 3px 3px $dark-charcoal;
-            }
-        }
-    }
-    address {
-        li{
-            list-style: none;
-            position: relative;
-        }
-        a {
-            color: $font-color-2;
-            position: relative;
-            margin:auto  0;
-            display: block;
-            img {
-                height: 20px;
-                &[alt="hotline"] {
-                    height: 30px;
-                }
-            }
-            & + .LinkCate {
-                display: none;
-                &:hover {
-                    display: block;
-                }
-                animation: fadeup 0.3s ease-in-out;
-                position: absolute;
-                background: whitesmoke;
-                left: 0;
-                top:calc(100% - 19px);
-                width: 100%;
-                z-index: $navbar-index;
-                a {
-                    padding: 0.5em 1em;
-                    transition: 0.3s ease-in-out;
-                    &:hover {
-                        font-weight: bold;
-                        padding-left: 2em;
-                    }
-                }
-            }
-            &:hover {
-                & + .LinkCate {
-                    display: block;
-                }
-            }
-        }       
-    }
-}
-#index{
-    nav.navbar-desktop {        
-        address {            
-            a {                
-                & + .LinkCate {
-                    display: none;                   
-                }
-            }
-        }
-    }
-}
+// nav {
+//     .navlink {
+//         a {
+//             display: block;
+//             padding: 1em;
+//             &:link {
+//                 text-decoration: none;
+//             }
+//             &:hover {
+//                 text-decoration: none;
+//             }
+//         }
+//     }
+// }
+// nav.navbar-mobie {
+//     //mọi ảnh trong navbả sẽ cao bằng 1.5em
+//     background: $theme-color-1;
+//     display: flex;
+//     justify-content: space-between;
+//     flex-wrap: wrap;
+//     font-size: 14px;
+//     a {
+//         img.logo-nav {
+//             width: auto;
+//             height: 2.5em;
+//         }
+//     }
+//     button,
+//     .button {
+//         display: block;
+//         background: $dark-charcoal;
+//         border: none;
+//         img {
+//             height: 1em;
+//             width: auto;
+//         }
+//     }
+//     .input-search {
+//         background: $theme-color-1;
+//         left: 0;
+//         width: 100%;
+//         position: absolute;
+//         animation-name: fadeup;
+//         animation-duration: 0.3s;
+//         animation-timing-function: ease-in-out;
+//         font-size: 13px;
+//         padding: 0 0;
+//         display: none;
+//         .form {
+//             outline-color: transparent;
+//             overflow: hidden;
+//             border-radius: 5px;
+//             background: white;
+//             display: flex;
+//             flex: none;
+//         }
+//         margin: auto auto;
+//         input[type="search"] {
+//             flex: auto;
+//             &:focus-within {
+//                 box-shadow: inset 0px 0px 3px 3px $dark-charcoal;
+//             }
+//         }
+//         @media screen and(min-width:568px) {
+//             margin: auto 1em auto auto;
+//             max-width: 567px;
+//             flex: auto;
+//             img {
+//                 width: 0;
+//             }
+//             input[type="search"] {
+//                 flex: auto;
+//                 width: 0;
+//                 padding: 0;
+//             }
+//         }
+//     }
+//     @media screen and (min-width: 567px) {
+//         display: none;
+//     }
+// }
+// nav.navbar-desktop {
+//     position: sticky;
+//     top: 0;
+//     z-index: $navbar-index;
+//     @media screen and (max-width:768px) {
+//         position: relative;
+//     }
+//     //mọi ảnh trong navbả sẽ cao bằng 1.5em
+//     img {
+//         width: auto;
+//         height: 3.5em;
+//     }
+//     button.cart-button {
+//         img {
+//             height: 1.5em;
+//         }
+//     }
+//     .z-100 {
+//         z-index: 100;
+//     }
+//     .input-search {
+//         button,
+//         .button {
+//             display: block;
+//             background: $dark-charcoal;
+//             border: none;
+//             img {
+//                 height: 1.5em;
+//                 width: auto;
+//             }
+//         }
+//         max-width: 567px;
+//         flex: auto;
+//         padding: 1em;
+//         input[type="search"] {
+//             flex: auto;
+//             padding: 0;
+//         }
+//         background: $theme-color-1;
+//         font-size: 13px;
+//         .form {
+//             outline-color: transparent;
+//             overflow: hidden;
+//             border-radius: 5px;
+//             background: white;
+//             display: flex;
+//             flex: none;
+//         }
+//         input[type="search"] {
+//             flex: auto;
+//             &:focus-within {
+//                 box-shadow: inset 0px 0px 3px 3px $dark-charcoal;
+//             }
+//         }
+//     }
+//     address {
+//         li{
+//             list-style: none;
+//             position: relative;
+//         }
+//         a {
+//             color: $font-color-2;
+//             position: relative;
+//             margin:auto  0;
+//             display: block;
+//             img {
+//                 height: 20px;
+//                 &[alt="hotline"] {
+//                     height: 30px;
+//                 }
+//             }
+//             & + .LinkCate {
+//                 display: none;
+//                 &:hover {
+//                     display: block;
+//                 }
+//                 animation: fadeup 0.3s ease-in-out;
+//                 position: absolute;
+//                 background: whitesmoke;
+//                 left: 0;
+//                 top:calc(100% - 19px);
+//                 width: 100%;
+//                 z-index: $navbar-index;
+//                 a {
+//                     padding: 0.5em 1em;
+//                     transition: 0.3s ease-in-out;
+//                     &:hover {
+//                         font-weight: bold;
+//                         padding-left: 2em;
+//                     }
+//                 }
+//             }
+//             &:hover {
+//                 & + .LinkCate {
+//                     display: block;
+//                 }
+//             }
+//         }       
+//     }
+// }
+// #index{
+//     nav.navbar-desktop {        
+//         address {            
+//             a {                
+//                 & + .LinkCate {
+//                     display: none;                   
+//                 }
+//             }
+//         }
+//     }
+// }

@@ -1,0 +1,32 @@
+.img-zoom-container {
+    z-index: 99;
+    overflow: visible;
+    &:hover {
+        img {
+            transform: translate(-50%, -50%) scale(1) !important;
+        }
+    }
+    &::before {
+        display: none;
+    }
+}
+.img-zoom-lens {
+    position: absolute;
+    border: 1px solid black;
+    /*set the size of the lens:*/
+    width: 30%;
+    height: 30%;
+    z-index: 1;
+}
+.img-zoom-result {
+    border: 1px solid #d4d4d4;
+    /*set the size of the result div:*/
+    width: 100%;
+    height: 100%;
+    // background: black;
+    position: absolute;
+    top: 0;
+    left: calc(100% + 50px);
+    z-index: 99;
+    overflow: hidden;
+}

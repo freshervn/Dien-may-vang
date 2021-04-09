@@ -1,0 +1,25 @@
+.img-magnifier-container {
+    position: relative;
+    z-index: 0;
+    .img-magnifier-glass {
+        position: absolute;
+        border: 1px solid #4BD6FA;
+        border-radius: 50%;
+        cursor: none;
+        /*Set the size of the magnifier glass:*/
+        width: 50%;
+        height: 50%;
+        z-index: 1;
+    }
+}
+.img-zoom-container {
+    z-index: 1;
+    overflow: visible;
+    &:hover img {
+        -webkit-transform: translate(-50%, -50%) scale(1) !important;
+        transform: translate(-50%, -50%) scale(1) !important;
+    }
+    &::before {
+        display: none;
+    }
+}
